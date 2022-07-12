@@ -1,0 +1,93 @@
+*,::before,::after {
+  box-sizing: border-box;
+}
+html {
+  font-size: 22px;
+  font-family: sans-serif;
+  color: #709590;
+  font-weight: bold;
+}
+body {
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(to top right,#709590,snow);
+}
+#root {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+#app-wrapper {
+  background: linear-gradient(to bottom right, #c0e5b4, lavenderblush);
+  height: max(80%,400px);
+  width: max(50%,400px);
+  box-shadow: 0 0 15px 7px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#menu {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+#board {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  padding: 20px 0;
+  width: 70%;
+  border: 1px solid;
+  border-radius: 20px;
+}
+.btns-wrapper {
+  display: flex;
+  justify-content: space-around;
+}
+.btn {
+  padding: 10px;
+  min-width: 50px;
+  border: 2px solid;
+  border-radius: 5px;
+  color: inherit;
+  background: none;
+  font-size: 0.8rem;
+  transition: 0.1s;
+  &:hover {
+    box-shadow: 0 0 7px 3px #709590
+  }
+}
+#box-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 10px;
+  font-family: 'Shadows Into Light', sans-serif;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+.box {
+  width: 50px;
+  height: 50px;
+  border: 2px solid;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: default;
+  transition: 0.1s;
+  &:hover{
+    border: 3px solid steelblue;
+  }
+}
+.win-box {
+  background: palegreen;
+}
+.lose-box {
+  background: #fce5cf;
+}
+
